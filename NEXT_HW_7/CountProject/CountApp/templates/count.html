@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{% static 'count.css' %}" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Type a random text which you want to get result!</h1>
+        <form action="{% url 'result'%}" method="post">
+            <!--띄어쓰기 중요함-->
+            {%csrf_token%}
+            <textarea name="text" cols="30" rows="10"></textarea>
+            <br />
+            <input type="submit" value="제출" />
+        </form>
+    </body>
+</html>

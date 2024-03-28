@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+    <title>Project Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'project3.css' %}" />
+</head>
+<body>
+    <h1 id="text">KIM SUNG MIN | Be ambitious, Be brave, Be yourself</h1>
+
+    <div class="top">
+        <a href="{% url 'info' %}">Home</a>
+        <a href="https://www.instagram.com/s_.xmile/">Contact</a>
+        <a id="current" href="{% url 'project' %}">Project</a>
+    </div>
+    <div class="thin-line"></div>
+    <h1 id="title">PROJECT</h1>
+
+    <div class="intro">
+        <div><img id="intro1" src="{% static 'image/intro1.PNG' %}" alt="project-intro" /></div>
+        <div><img id="intro2" src="{% static 'image/intro2.PNG' %}" alt="project-intro" /></div>
+        <div><img id="intro3" src="{% static 'image/intro3.PNG' %}" alt="project-intro" /></div>
+    </div>
+    <div class="tag">
+        <div>[W1] 자기소개 웹페이지</div>
+        <div>[W2] 인스타그램 클론 코딩</div>
+        <div>[W5] 토스 클론 코딩</div>
+    </div>
+    <img id="instagram" src="{% static 'image/instagram.PNG' %}" alt="project-insta" />
+    <img id="toss" src="{% static 'image/toss.PNG' %}" alt="project-toss" />
+</body>
