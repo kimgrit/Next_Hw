@@ -1,0 +1,101 @@
+body {
+    background-color: rgb(249, 249, 142);
+    width: 1000px;
+    margin-bottom: 20%;
+}
+
+.top-container {
+    width: 400px;
+    height: 80px;
+    left: 500px;
+    position: relative;
+    top: 130px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    background-color: rgb(249, 249, 142);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Container {
+    width: 400px;
+    min-height: 500px;
+    position: relative;
+    left: 500px;
+    top: 150px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    background-color: white;
+}
+.parent {
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 300%;
+}
+
+h2 {
+    font-size: 150%;
+    position: relative;
+    left: 230px;
+    padding-top: 5%;
+}
+
+#plus {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #efe57d;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-radius: 50%;
+    font-size: 60px;
+    align-self: center;
+    top: 100px;
+    left: 200px;
+    margin-top: auto; /*Container움직이면 얘도 움직임 */
+}
+.container {
+    position: relative;
+    left: -100px;
+}
+.content {
+    width: 85%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    position: relative;
+    padding-top: 20%;
+    border-left-color: rgb(249, 249, 142);
+    border-left-width: 10px;
+    border-left-style: dashed;
+    padding: 1%;
+    font-size: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dday {
+    display: inline-block;
+    padding: 3px;
+    background-color: #1b1b1b;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+a {
+    color: rgb(0, 0, 0); /* 원하는 색상으로 변경 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-family: sans-serif;
+    position: relative;
+    left: 120px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+}

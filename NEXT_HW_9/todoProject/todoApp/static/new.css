@@ -1,0 +1,100 @@
+body {
+    background-color: rgb(249, 249, 142);
+    width: 1000px;
+    margin-bottom: 20%;
+}
+
+.top-container {
+    width: 400px;
+    height: 80px;
+    left: 500px;
+    position: relative;
+    top: 130px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    background-color: rgb(249, 249, 142);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 300%;
+}
+h2 {
+    font-size: 150%;
+    position: relative;
+    left: 230px;
+    padding-top: 5%;
+}
+
+.Container {
+    width: 400px;
+    min-height: 500px;
+    position: relative;
+    left: 500px;
+    top: 150px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    background-color: white;
+}
+
+.content {
+    width: 350px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    left: 26px;
+    top: 5px;
+    min-height: 400px;
+    padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: black;
+}
+p {
+    font-size: smaller;
+    color: lightgray;
+}
+label {
+    position: relative;
+    left: 30px;
+    font-weight: bolder;
+    display: list-item;
+}
+input,
+textarea {
+    background-color: beige;
+    border-radius: 20px;
+    border-width: 2px;
+}
+
+#memo {
+    background-color: beige;
+    max-width: 300px;
+    position: relative;
+    left: 20px;
+    min-height: 200px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    top: 40px;
+    position: relative;
+    margin-top: auto;
+}
+input#title {
+    color: black;
+}
+
+a#button,
+button {
+    text-decoration: none; /* 밑줄 제거 */
+    background-color: #6c6b68;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px 10px;
+    text-align: center;
+    align-self: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}

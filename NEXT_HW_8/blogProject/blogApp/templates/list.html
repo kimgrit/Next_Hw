@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{% static 'list2.css' %}" />
+
+        <title>Article List</title>
+    </head>
+    <body>
+        <img id="main_img" src="{% static 'img/season.gif' %}" alt="home화면" />
+        <h1> Sungmin | BLOG </h1>
+        <a id = 'new' href="{% url 'new' %}">New Article</a>
+
+        <div class='container'>
+        <h3>  Category<h3>
+            <ul class='box'>
+                {% for category, count in category_counts.items %}
+                <a href="{% url 'category' category  %}">{{category }} ({{ count }})</br></a>
+                {% endfor %}
+            </ul>
+        </br>
+        <h3>  All ({{total_articles}})</h3> <!-- view에서 템플릿으로 전달되어야 하는 변수임-->
+            <ul>
+                {% for article in articles %}
+                <!--articles 는 배열이다. article1, article2 ...가 다 들어 있음-->
+                <a href="{% url 'detail' article.id %}">{{article.title}}</br>  </a>
+                <!--누르면 그 글의 상세페이지로 이동-->
+                {% endfor %}
+            </ul>       
+     </div>
+
+    </body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    width: flex;
+    background-color: rgb(246, 251, 217);
+    color: rgb(0, 0, 0);
+    font-family: 'Apple SD Gothic Neo';
+    font-family: Verdana;
+}
+
+#wrap {
+    min-height: 100%;
+    position: relative;
+    margin-top: 5%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; /*화면 꽉차게
+    /* footer를 aside위에 올리기 위해 사용(부유객체) */
+    position: absolute;
+    justify-self: baseline;
+    padding: 0 25px;
+    line-height: 60px;
+    color: #000000cc;
+    font-size: 13px;
+    border-top: 1px solid #262727;
+    text-align: center;
+}

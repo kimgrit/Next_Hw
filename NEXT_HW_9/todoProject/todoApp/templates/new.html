@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}" />
+        <title>new</title>
+    </head>
+    <body>
+        <div class="top-container">
+            <h1 id="title">To Do List</h1>
+        </div>
+        <div class="Container">
+            <h2>새로운 할 일</h2>
+            <form action="" method="post">
+                {% csrf_token %}
+
+                <div class="content">
+                    <label for="title">Todo:</label>
+                    <input type="text" name="title" id="title" placeholder="   투두 내용을 입력하세요." />
+
+                    <label for="due_date">마감기한</label>
+                    <p>미입력 시 오늘 날짜로 입력됩니다.</p>
+                    <input type="date" name="due_date" id="due_date" />
+                    <label for="content">메모</label>
+
+                    <textarea
+                        name="content"
+                        id="content"
+                        cols="30"
+                        rows="10"
+                        placeholder="   메모해둘 것이 있다면 자유롭게 입력하세요."
+                    ></textarea>
+                </div>
+
+                <div class="buttons">
+                    <a id="button" href="{% url 'home' %}">목록으로</a>
+                    <button type="submit">목록에 추가</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

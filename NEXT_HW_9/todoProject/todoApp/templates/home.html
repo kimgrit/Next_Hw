@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+
+        <title>home</title>
+    </head>
+    <body>
+        <div class="top-container">
+            <h1>To Do List</h1>
+        </div>
+        <div class="parent">
+            <div class="Container">
+                <h2>{{ today }}</h2>
+
+                {% for post in posts %}
+                <div class="container">
+                    <a class="content" href="{% url 'detail' post.pk %}">
+                        <span>{{post.title }}</span>
+                        <span>
+                            <span id="dday"> D{{post.d_day }} </span>
+                            <span id="checkbox"
+                                ><input type="checkbox" {% if post.completed %}checked {% endif %}
+                            /></span>
+                        </span>
+                    </a>
+                </div>
+
+                {% endfor %}
+            </div>
+            <a id="plus" href="{% url 'new' %}">+</a>
+        </div>
+    </body>
+</html>

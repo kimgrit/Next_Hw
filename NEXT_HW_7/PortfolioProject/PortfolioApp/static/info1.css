@@ -1,0 +1,107 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Apple SD Gothic Neo';
+    margin: 5%;
+    position: relative;
+}
+a {
+    color: rgb(255, 255, 255); /* 원하는 색상으로 변경 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+#current {
+    color: gold;
+}
+a:hover {
+    color: rgb(194, 255, 243); /* 마우스 오버 시 */
+}
+
+a:active {
+    color: rgb(194, 255, 243); /* 마우스 오버 시 */
+}
+
+.top {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-style: italic;
+}
+#main_img {
+    width: 500px;
+    position: absolute;
+    left: 650px;
+    top: 120px;
+    z-index: 1;
+}
+#back_img {
+    width: 500px;
+    position: absolute;
+    left: 750px;
+    top: 220px;
+    z-index: 0;
+    filter: saturate(0%);
+}
+
+#intro {
+    position: relative;
+    left: 150px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top: 500px;
+    filter: opacity(60%);
+}
+
+#about {
+    font-size: 760%;
+    position: absolute;
+    z-index: 2;
+    top: 150px;
+    left: 95px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.thin-line {
+    bottom: 38px;
+    left: 100px;
+    top: 200px;
+    width: 660px; /* 가로폭 설정 */
+    height: 4px; /* 선의 높이 설정 */
+    background-color: rgb(255, 255, 255); /* 선의 색상 설정 */
+    position: absolute;
+    z-index: 3;
+}
+
+#text {
+    position: relative;
+    font-style: italic;
+    font-weight: lighter;
+    left: 910px;
+    font-size: medium;
+}
+
+#par {
+    font-size: 15px;
+    font-weight: lighter;
+    width: 450px;
+    position: relative;
+    top: 500px;
+    left: 100px;
+}
+#par2 {
+    font-size: 15px;
+    font-weight: lighter;
+    width: 450px;
+    position: relative;
+    top: 550px;
+    left: 100px;
+    font-style: italic;
+    filter: opacity(80%);
+}
+#par3 {
+    font-size: 15px;
+    font-weight: lighter;
+    width: 450px;
+    position: relative;
+    top: 400px;
+    left: 740px;
+}

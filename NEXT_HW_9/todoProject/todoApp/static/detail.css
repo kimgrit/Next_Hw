@@ -1,0 +1,67 @@
+body {
+    background-color: rgb(249, 249, 142);
+    width: 1000px;
+    margin-bottom: 20%;
+}
+
+.top-container {
+    width: 400px;
+    height: 80px;
+    left: 500px;
+    position: relative;
+    top: 130px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    background-color: rgb(249, 249, 142);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Container {
+    width: 400px;
+    min-height: 500px;
+    position: relative;
+    left: 500px;
+    top: 150px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    background-color: white;
+}
+#title {
+    color: rgb(255, 255, 255);
+    font-size: 300%;
+}
+.content {
+    width: 350px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    left: 26px;
+    top: 20px;
+    min-height: 400px;
+    padding-left: 2%;
+}
+
+#memo {
+    background-color: beige;
+    max-width: 300px;
+    position: relative;
+    left: 20px;
+    min-height: 200px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    top: 40px;
+    position: relative;
+    margin-top: auto;
+}
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    background-color: #6c6b68;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px 10px;
+    text-align: center;
+    align-self: center;
+}

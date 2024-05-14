@@ -1,0 +1,52 @@
+{% extends 'base.html' %} {% block title %}
+<h1>POST</h1>{% endblock %} {% block css %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}" />
+{% endblock %} {% block content %}
+
+<div>
+    <h2>책 제목</h2>
+    <p>{{ post.title }}</p>
+</div>
+<div>
+    <h2>작성자</h2>
+    <p>{{ post.creator }}</p>
+</div>
+<div>
+    <h2>책 내용</h2>
+    <p>{{ post.content }}</p>
+</div>
+<div>
+    <h3>마지막으로 열람한 사람</h3>
+    <p>{{ post.last_user }}</p>
+    <h3>마지막으로 열람한 시간</h3>
+    <p>{{ post.last_time }}</p>
+
+</div>
+
+
+
+<form method="POST">
+    {% csrf_token%}
+    <input type="text" name="content" placeholder="댓글을 입력해주세요" />
+    <button type="submit">작성하기</button>
+</form>
+
+<div class ="buttens">
+<div class="butten">
+<a href="{% url 'home' %}">홈으로</a></div>
+<div class="butten">
+<a href="{% url 'update' post.pk %}">수정하기</a></div>
+<div class="butten">
+    <a href="{% url 'delete' post.pk %}">삭제하기</a>
+</div>  
+</div>
+
+
+{% for comment in post.comments.all %}
+<li>{{comment.content}}
+    <a href={% url 'delete-comment' post.pk comment.pk %}>삭제</a>
+</li>
+{% endfor %}
+
+{%endblock%}
+

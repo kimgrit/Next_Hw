@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{% static 'new1.css' %}" />
+
+        <title>New Article</title>
+    </head>
+    <body>
+        <h1>New Article</h1>
+        <form action="/new" method="post">
+            {% csrf_token %}
+
+                <div>
+                    <div>Category</div>
+                    <select name="category">
+                        <option value="">-----</option>
+                        {% for category in categories %}
+                        <option value="{{ category }}">{{ category }}</option>
+                        {% endfor %}
+                    </select>
+                </br>
+                </div>
+                <div>
+                    <div>Title</div>
+                    <input type="text" name="title" placeholder="제목을 입력하세요." />
+                </div>
+            <div>
+                <div>Content</div>
+                <textarea name="content" cols="30" rows="10" placeholder="당신의 생각과 느낌을 가감없이 나눠보세요."></textarea>
+            </div>
+            <button type="back">Back</button>
+
+            <button type="submit">Post</button>
+        </form>
+    </body>
+</html>

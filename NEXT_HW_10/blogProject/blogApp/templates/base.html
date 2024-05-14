@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{% static 'base1.css' %}" />
+        {% block css %} {% endblock css %}
+
+        <title>Article</title>
+    </head>
+    <body>
+        {%block html%} {%endblock html%}
+        <div id="wrap">
+            <footer>
+                <div>NEXT_Session 10</div>
+                <div>|</div>
+                <div>Django</div>
+                <div>|</div>
+                <div>Html</div>
+                <div>|</div>
+
+                <div>Css</div>
+                <div>|</div>
+
+                <div>since 20240406</div>
+            </footer>
+        </div>
+    </body>
+</html>

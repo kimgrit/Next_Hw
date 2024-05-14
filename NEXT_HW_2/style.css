@@ -1,0 +1,302 @@
+.top_box {
+    height: 30px;
+    width: 400px;
+    display: flex; /* 아이템들을 가로로 배치하기 위해 flex를 사용합니다. */
+    justify-content: space-between; /* 아이템들을 좌우로 고르게 분배합니다. */
+    align-items: center; /* 아이템들을 수직으로 가운데 정렬합니다. */
+}
+
+#top {
+    position: relative;
+    left: 10px;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.icon {
+    margin: 7px;
+}
+
+.fa-chevron-left,
+.fa-bell,
+.id,
+.fa-ellipsis {
+    font-size: larger;
+}
+
+.round {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%; /* 동그란 프레임*/
+    overflow: hidden; /* 이미지를 프레임보다 뒤로 가게끔 만들기 */
+}
+
+#pic0 {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.main_box {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    width: 350px;
+    margin: 10px;
+}
+
+.follower {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 12px;
+    position: relative;
+    left: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.tex1,
+.text2,
+.text3 {
+    margin: 20px;
+    position: relative;
+    left: 25px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.num {
+    font-weight: 600;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#heart {
+    font-size: 12px;
+    position: relative;
+    left: 20px;
+}
+#name {
+    font-style: bold;
+    position: relative;
+    left: 20px;
+    font-family: sans-serif;
+    font-weight: 450;
+    font-size: 13px;
+}
+
+#link {
+    color: rgb(78, 115, 160);
+    position: relative;
+    font-weight: 200;
+    left: 20px;
+}
+
+.fa-link {
+    width: 20px;
+    height: 29px;
+    position: relative;
+    left: 20px;
+    top: 3px;
+    color: rgb(78, 115, 160);
+}
+
+.buttons {
+    display: flex;
+    height: 30px;
+    width: 400px;
+    justify-content: space-around;
+}
+
+#list {
+    position: relative;
+    left: 10px;
+    font-family: Verdana;
+    font-size: 13px;
+    display: inline-block;
+    border-radius: 6px; /* 라운드 직사각형 모양으로 만듦 */
+    background-color: #e3e3e3; /* 배경색 설정 */
+    padding: 6px 50px;
+}
+
+#dm {
+    position: relative;
+    font-family: Verdana;
+    font-size: 13px;
+    display: inline-block;
+    border-radius: 6px; /* 라운드 직사각형 모양으로 만듦 */
+    background-color: #e3e3e3; /* 배경색 설정 */
+    padding: 6px 50px;
+}
+
+#plus {
+    position: relative;
+    right: 10px;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 6px; /* 라운드 직사각형 모양으로 만듦 */
+    background-color: #e3e3e3; /* 배경색 설정 */
+    padding: 7px 6px;
+}
+.fa-angle-down {
+    height: 2px;
+    width: 2px;
+    position: relative;
+    top: 2px;
+}
+
+.pic1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* 동그란 프레임*/
+    overflow: hidden; /* 이미지를 프레임보다 뒤로 가게끔 만들기 */
+    position: relative;
+    top: 5px;
+    margin: 3px;
+    border: 5px solid rgb(255, 255, 255);
+    /* 프레임에 테두리를 추가합니다. */
+    box-shadow: 0 0 2px gray;
+}
+
+.pic2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* 동그란 프레임*/
+    overflow: hidden; /* 이미지를 프레임보다 뒤로 가게끔 만들기 */
+    position: relative;
+    top: 5px;
+    margin: 3px;
+    border: 5px solid rgb(255, 255, 255); /* 프레임에 테두리를 추가합니다. */
+    box-shadow: 0 0 2px gray;
+}
+
+.pic3 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* 동그란 프레임*/
+    overflow: hidden; /* 이미지를 프레임보다 뒤로 가게끔 만들기 */
+    position: relative;
+    top: 5px;
+    margin: 3px;
+    border: 5px solid rgb(255, 255, 255); /* 프레임에 테두리를 추가합니다. */
+    box-shadow: 0 0 2px gray;
+}
+
+.pic4 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* 동그란 프레임*/
+    overflow: hidden; /* 이미지를 프레임보다 뒤로 가게끔 만들기 */
+    position: relative;
+    top: 5px;
+    margin: 3px;
+    border: 5px solid rgb(255, 255, 255); /* 프레임에 테두리를 추가합니다. */
+    box-shadow: 0 0 2px gray;
+}
+
+#pic11,
+#pic22,
+#pic33,
+#pic44 {
+    width: 60px;
+    height: 6px;
+    min-width: 60px;
+    min-height: 60px;
+}
+
+.highlight {
+    display: flex;
+    height: 100px;
+    width: 360px;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    margin: 5px;
+    justify-content: space-around;
+}
+
+.letter {
+    display: flex;
+    margin: 10px;
+    position: relative;
+    left: 10px;
+    font-family: Verdana;
+}
+
+#letter1,
+#letter2,
+#letter3,
+#letter4 {
+    margin: 20px;
+    position: relative;
+    left: -7px;
+    bottom: 38px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.thin-line {
+    position: relative;
+    bottom: 31px;
+    width: 130px; /* 가로폭 설정 */
+    height: 1.5px; /* 선의 높이 설정 */
+    background-color: rgb(34, 33, 33); /* 선의 색상 설정 */
+}
+
+/* div로 각자 연결하면, 얘네가 분리되는건지.. 아무튼 가로로 안된다*/
+
+#grid {
+    font-size: 22px;
+    padding: 52px;
+    position: relative;
+    top: -40px;
+}
+
+#reels,
+#tag {
+    font-size: 22px;
+    padding: 53px;
+    position: relative;
+    color: rgb(130, 127, 127);
+    top: -40px;
+}
+
+.row-1 {
+    display: flex;
+    width: 400px;
+    height: auto;
+    position: relative;
+    top: -30px;
+}
+.row-2 {
+    display: flex;
+    width: 400px;
+    height: auto;
+    position: relative;
+    top: -30px;
+}
+
+#feed11,
+#feed22,
+#feed33,
+#feed44,
+#feed55,
+#feed66 {
+    width: 130px;
+    height: 150px;
+}
+
+.feed1,
+.feed2,
+.feed3,
+.feed4,
+.feed5,
+.feed6 {
+    width: 130px;
+    height: 130px;
+    overflow: hidden; /* 프레임에 안하면, 크기를 늘리거나 줄이는거지 그 크기만큼 잘라내진 않음 */
+    border: 0.001px solid rgb(255, 255, 255);
+}

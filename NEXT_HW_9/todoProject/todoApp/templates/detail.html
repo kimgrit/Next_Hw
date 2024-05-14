@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}" />
+
+        <title>detail</title>
+    </head>
+    <body>
+        <div class="top-container">
+            <h1 id="title">To Do List</h1>
+        </div>
+        <div class="Container">
+            <div class="content">
+                <h1>📌{{ post.title }}</h1>
+                <h3>마감 기한</h3>
+                <p>{{post.due_date}}</p>
+                <h3>메모</h3>
+                <p id="memo">{{ post.content }}</p>
+            </div>
+            <div class="buttons">
+                <div><a href="{% url 'home' %}">뒤로가기</a></div>
+                <div><a href="{% url 'delete' post.pk %}">삭제</a></div>
+                <div><a href="{% url 'update' post.pk %}">수정</a></div>
+            </div>
+        </div>
+    </body>
+</html>

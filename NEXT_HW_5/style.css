@@ -1,0 +1,262 @@
+.whole {
+    left: 10px;
+    height: 650px;
+    width: 350px;
+    background-color: #f2f3f5;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 0.5px;
+}
+
+#logo {
+    height: 40px;
+    border-radius: 15px;
+}
+
+#location {
+    height: 40px;
+    position: relative;
+    left: 70px;
+}
+
+#alram {
+    height: 40px;
+    position: relative;
+    right: 5px;
+}
+
+.top-box {
+    border-radius: 15px;
+    height: 50px;
+    width: 350px;
+    display: flex; /* 아이템들을 가로로 배치하기 위해 flex를 사용합니다. */
+    justify-content: space-between; /* 아이템들을 좌우로 고르게 분배합니다. */
+    background-color: #f2f3f5;
+    align-items: center;
+}
+
+#tossbank {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    right: 40px;
+    font-weight: 570;
+}
+
+.fa-solid {
+    position: relative;
+    left: 40px;
+    font-size: 13px;
+    color: gray;
+}
+
+.first-box {
+    position: relative;
+    height: 65px;
+    width: 320px;
+    left: 15px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.mid-box {
+    position: relative;
+    height: 450px;
+    width: 320px;
+    left: 15px;
+    top: 10px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#img1 {
+    height: 55px;
+    position: relative;
+    left: -20px;
+    top: 10px;
+}
+#img2 {
+    height: 58px;
+    left: -13px;
+    top: 10px;
+    position: relative;
+}
+#img3 {
+    height: 74px;
+    left: -26px;
+    top: 10px;
+    position: relative;
+}
+#img4 {
+    height: 57px;
+    left: -37px;
+    top: 10px;
+    position: relative;
+}
+#img5 {
+    height: 57px;
+    left: -31px;
+    top: 10px;
+    position: relative;
+}
+#img6 {
+    height: 57px;
+    left: -18px;
+    top: 10px;
+    position: relative;
+}
+
+.bank1,
+.bank2,
+.bank3,
+.bank4,
+.bank5,
+.bank6 {
+    position: relative;
+    height: 65px;
+    width: 300px;
+    left: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.button {
+    border-radius: 9px;
+    background-color: #e8e9eb9d;
+    position: relative;
+    top: 10px;
+    height: 25px;
+    width: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(71, 71, 71);
+}
+
+#now {
+    height: 30px;
+    width: 70px;
+}
+
+.font1 {
+    font-weight: 500;
+    font-size: 12px;
+    color: gray;
+}
+
+#red {
+    color: rgb(236, 12, 12);
+}
+.text1 {
+    position: relative;
+    left: -50px;
+    top: 10px;
+}
+
+.text2 {
+    position: relative;
+    left: -30px;
+    top: 10px;
+}
+
+.text3 {
+    position: relative;
+    left: -65px;
+    top: 10px;
+}
+.text4 {
+    position: relative;
+    left: -110px;
+    top: 10px;
+}
+.text5 {
+    position: relative;
+    left: -89px;
+    top: 10px;
+}
+.text6 {
+    position: relative;
+    left: -53px;
+    top: 10px;
+}
+.thin-line {
+    position: relative;
+    bottom: 38px;
+    left: 25px;
+    width: 300px; /* 가로폭 설정 */
+    height: 1.5px; /* 선의 높이 설정 */
+    background-color: rgba(109, 109, 109, 0.131); /* 선의 색상 설정 */
+}
+.view {
+    position: relative;
+    left: 70px;
+    top: 30px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.view2 {
+    position: relative;
+    left: 253px;
+    top: 12px;
+}
+
+.bottom-box {
+    width: 350px;
+    height: 70px;
+    left: 0px;
+    top: 13px;
+    position: relative;
+    background-color: rgb(254, 254, 254);
+    border-radius: 15px;
+    border-style: hidden;
+    display: flex;
+    justify-content: center;
+}
+.menu {
+    position: relative;
+    font-size: 22px;
+    left: -3px;
+    top: -10px;
+    padding: 6.5%;
+    color: #b1b5bcdc;
+}
+.menu-text {
+    width: 380px;
+    height: 70px;
+    top: -40px;
+    left: -13px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+}
+.font2 {
+    padding: 6%;
+    color: #676b72;
+}
+
+.fa-house {
+    color: black;
+    left: 0px;
+}
+
+.home {
+    color: black;
+    font-weight: 600;
+}
+.fa-gem {
+    position: relative;
+    left: -10px;
+}

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{% static 'category.css' %}" />
+
+        <title>Category</title>
+    </head>
+    <body>
+        <h1>{{ category }}</h1>
+        <h3>{{total_articles}} 개의 글이 있습니다</h3>
+        <a id="back" href="{% url 'list' %}">Back</a>
+
+        <ul class="content">
+            {% for article in articles %}
+            <li><a href="{% url 'detail' article.id %}">{{article.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

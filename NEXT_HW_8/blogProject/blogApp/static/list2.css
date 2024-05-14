@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Apple SD Gothic Neo';
+}
+.container {
+    padding: 5px;
+    width: 370px;
+    height: auto;
+    top: 50px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.198); /* 선의 색상 설정 */
+}
+#main_img {
+    display: flex;
+    justify-content: center;
+    width: 370px;
+}
+h1 {
+    color: lemonchiffon;
+}
+h3 {
+    font-style: italic;
+    color: gray;
+    font-size: 20px;
+    left: 10px;
+}
+a {
+    color: rgb(255, 255, 255); /* 원하는 색상으로 변경 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-family: sans-serif;
+    position: relative;
+    left: 120px;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: normal;
+}
+.box {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    max-width: 360px;
+    left: -120px;
+}
+
+#new {
+    margin-top: 20%;
+    font-style: bolder;
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: lemonchiffon;
+    padding: 5px;
+    background-color: #ffffff2b;
+    border: 2px solid lemonchiffon;
+    position: relative;
+    top: 20px;
+    border-radius: 10px;
+}

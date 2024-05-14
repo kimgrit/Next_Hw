@@ -1,0 +1,85 @@
+body {
+    background-color: rgb(246, 251, 217);
+    color: rgb(0, 0, 0);
+    font-family: 'Apple SD Gothic Neo';
+    font-family: Verdana;
+    margin: 10%;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.452);
+    width: 900px;
+    height: 400px;
+    position: relative;
+    top: 60px;
+    padding: 2%;
+    border-top-style: double;
+    border-top-width: 5px;
+    border-top-color: rgb(132, 195, 107);
+}
+
+#article {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    padding: 1%;
+    margin: 1%;
+    border-left-color: gray;
+    border-left-width: 4px;
+    border-left-style: solid;
+    font-family: 'Dovemayo_gothic';
+}
+
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    color: gray;
+    margin: 2%;
+    position: relative;
+}
+
+#container {
+    align-items: center;
+    font-size: 18px;
+    font-weight: bolder;
+    position: relative;
+    top: -50px;
+    right: 40px;
+}
+
+h1 {
+    font-size: 280%;
+    border-left-color: rgb(132, 195, 107);
+    border-left-width: 13px;
+    padding-left: 2%;
+    border-left-style: solid;
+}
+
+a {
+    color: rgb(0, 0, 0); /* 원하는 색상으로 변경 */
+    text-decoration: none; /* 밑줄 제거 */
+    position: relative;
+    left: 120px;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Dovemayo_gothic';
+}
+
+#back {
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(132, 195, 107);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    position: relative;
+    left: 800px;
+    top: 0px;
+}

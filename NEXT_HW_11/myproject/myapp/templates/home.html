@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block title %}
+<h1>HOME</h1>
+{% endblock %} {% block css %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+{% endblock %} {% block content %}
+<div>
+    <ul>
+        {% for post in posts %}
+        <div class="posts">
+            <li>
+                <span id="num">{{ forloop.counter }} 📌 </span>
+                <a href="{% url 'detail' post.pk %}">{{ post.title }}</a>
+            </li>
+        </div>
+        {% endfor %}
+    </ul>
+</div>
+<a id="butten" href="{% url 'new' %}">글 작성하기</a>
+{%endblock%}

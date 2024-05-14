@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{%block css%} 
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'list3.css' %}" />
+{%endblock%}
+
+{%block html%} 
+<div class = "box">
+    <div class = "left_bar">
+            <h2>Category<h2>
+            <ul>
+            {% for category, count in category_counts.items %}
+                    <a href="{% url 'category' category  %}">{{category }} ({{ count }})</a>
+                </br>
+            {% endfor %}
+            <ul>
+
+    </div>
+    <div class="main">
+        <img id="img" src="{% static 'img/img.jpeg' %}" alt="home" />
+
+            <h1> Sungmin | BLOG </h1>
+            <p> 이 곳은 성민이의 자유로운 생각이 기록되고 공유되는 공간입니다. 비난마세요 즐겨주세요 예뻐해주세요 </p>
+            <a id = 'new' href="{% url 'new' %}">New Article</a>
+
+            <div class = "content">
+                <div class ="all">
+                <div id="all">  📍All </div> <!-- view에서 템플릿으로 전달되어야 하는 변수임-->
+                <p> {{total_articles}}개의 글이 있습니다 </p></div>
+                {% for article in articles %}
+                <!--articles 는 배열이다. article1, article2 ...가 다 들어 있음-->
+                <div id = "article"> [{{article.category}}] <a href="{% url 'detail' article.id %}">{{article.title}}  </a></div>
+                <!--누르면 그 글의 상세페이지로 이동-->
+                {% endfor %}
+                       
+            </div>
+    </div>
+</div>
+{%endblock%}

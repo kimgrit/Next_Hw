@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block title %}
+<h1>ERROR</h1>
+{% endblock %} {% block css %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'error.css' %}" />
+{% endblock %} {% block content %}
+<h2>에러가 발생했습니다.</h2>
+<h3>작성자 본인만 수정 및 삭제가 가능합니다</h3>
+
+{{ error }}
+<a id="butten" href="{% url 'home' %}">돌아가기</a>
+
+{% endblock %}

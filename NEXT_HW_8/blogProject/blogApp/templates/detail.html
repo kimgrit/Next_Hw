@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{% static 'detail1.css' %}" />
+
+        <title>Article</title>
+    </head>
+    <body>
+        <h1>Detail Article</h1>
+        <div class="top-box">
+            <div>
+                <h3>Category</h3>
+                <div class="box">{{article.category}} <br /></div>
+            </div>
+            <div>
+                <h3>Created at</h3>
+                <div class="box" id="time">{{article.created_at}}</div>
+            </div>
+        </div>
+        <div>
+            <h3>Title</h3>
+            <div class="box">{{article.title}} <br /></div>
+        </div>
+
+        <div>
+            <h3>Content</h3>
+            <div class="box" id="content">{{article.content}} <br /></div>
+        </div>
+        <br />
+        <a id="back" href="{% url 'list' %}">Back</a>
+    </body>
+</html>

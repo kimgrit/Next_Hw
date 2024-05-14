@@ -1,0 +1,121 @@
+body {
+    background-color: rgb(132, 195, 107);
+    font-family: 'Apple SD Gothic Neo';
+    font-size: larger;
+    margin: 5%;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2%;
+    display: flex;
+}
+
+h1 {
+    color: rgb(132, 195, 107);
+    font-size: 70px;
+}
+
+h3 {
+    color: gray;
+    font-size: 25px;
+    left: 10px;
+}
+
+.box {
+    font-family: 'Dovemayo_gothic';
+}
+.box2 {
+    width: 650px;
+    background-color: beige;
+    padding: 2%;
+    font-family: 'Dovemayo_gothic';
+}
+
+.box3 {
+    min-height: 50px;
+    width: 650px;
+    background-color: beige;
+    padding: 2%;
+    font-family: 'Dovemayo_gothic';
+}
+
+.button {
+    display: flex;
+    justify-content: right;
+    top: -60px;
+    right: -20px;
+    position: relative;
+    margin-top: auto;
+}
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    background-color: #6c6b68;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px 10px;
+    text-align: center;
+    margin-right: 5%;
+    align-self: center;
+}
+/* #comment_content {
+    width: 400px;
+    height: 20px;
+    padding: 2%;
+    border-color: gray;
+    border-radius: 10px;
+}
+#comment-submit {
+    background-color: #d8a847;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 15px;
+    width: 80px;
+    padding: 10px 15px;
+    text-align: center;
+    margin-left: 5%;
+    align-self: center;
+}
+
+#comment {
+    padding: 2%;
+    margin: 1%;
+    align-self: center;
+    font-family: 'Dovemayo_gothic';
+}
+
+#input_comment {
+    display: flex;
+    position: relative;
+    justify-self: flex-end;
+} */
+
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#first_bar {
+    border-right-color: lightgray;
+    border-right-width: 2px;
+    border-right-style: solid;
+    padding-right: 100px;
+    font-size: smaller;
+}
+
+#second_bar {
+    padding: 5%;
+    margin-left: 7%;
+}
+
+#recomment {
+    font-size: smaller;
+    color: #6c6b68;
+    position: relative;
+    left: 10px;
+}

@@ -1,0 +1,78 @@
+{% extends 'base.html' %} {%block css%} {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'detail2.css' %}" />
+{%endblock %} {%block html%}
+<div class="container">
+    <div id="first_bar">
+        <h1>Detail</h1>
+        <div>
+            <h3>Category</h3>
+            <div class="box">{{article.category}} <br /></div>
+        </div>
+        <div>
+            <h3>Created at</h3>
+            <div class="box" id="time">{{article.created_at}}</div>
+        </div>
+    </div>
+    <div id="second_bar">
+        <div class="button">
+            <a id="back" href="{% url 'list' %}">Back</a>
+            <div><a href="{% url 'delete' article.id %}">Delete</a></div>
+        </div>
+        <div>
+            <h3>Title</h3>
+            <div class="box2">{{article.title}} <br /></div>
+        </div>
+
+        <div>
+            <h3>Content</h3>
+            <div class="box3" id="content">{{article.content}} <br /></div>
+        </div>
+        <form method="POST" id="input_comment">
+            {% csrf_token %}
+            <input id="comment_content" type="text" name="content" placeholder="댓글을 입력해주세요!" />
+            <button id="comment-submit" type="submit">작성</button>
+        </form>
+
+        {% for comment in article.comments.all %}
+        <p>{{ comment.content }}
+            <button class="btn-reply">답글</button>
+        </p>
+        <!--리댓글 입력 폼-->
+        <div class="reply-form" style="display: none">
+            <!--처음에 안 보이게 하기-->
+            <form method="POST" style="display: flex; align-items: center">
+                {% csrf_token %}
+                <input type="hidden" name="comment_id" value="{{ comment.id }}" />
+                <!-- 댓글의 ID 전송 -->
+                <input type="text" name="reply_content" placeholder="답글을 입력해 주세요" class="commentbox1" />
+                <button type="submit" class="btnsubmit1">등록</button>
+            </form>
+        </div>
+
+        {% for recomment in comment.recomments.all %}
+            <p>ㄴ {{ recomment.content }}</p>
+        {% endfor %}
+        {% endfor %}
+
+            <script>
+                // JavaScript를 사용하여 답글 입력창을 토글합니다.
+                const replyForms = document.querySelectorAll('.reply-form');
+                const replyButtons = document.querySelectorAll('.btn-reply');
+
+                replyButtons.forEach((button, index) => {
+                    button.addEventListener('click', () => {
+                        if (replyForms[index].style.display === 'none' || replyForms[index].style.display === '') {
+                            replyForms.forEach((form) => (form.style.display = 'none'));
+                            replyForms[index].style.display = 'block';
+                        } else {
+                            replyForms[index].style.display = 'none';
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+    {%endblock%}
+</div>

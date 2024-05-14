@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {%block css%} {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'category2.css' %}" />
+{%endblock%} {%block html%}
+<div id="container">
+    <div id="top">
+        <h1>{{ category }}</h1>
+        <p>{{total_articles}} 개의 글이 있습니다</p>
+    </div>
+    <a id="back" href="{% url 'list' %}">Back</a>
+
+    <div class="content">
+        {% for article in articles %}
+        <div id="article"><a href="{% url 'detail' article.id %}">{{article.}} {{article.title}}</a></div>
+        {% endfor %}
+    </div>
+</div>
+{%endblock%}
