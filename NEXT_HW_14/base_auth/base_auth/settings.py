@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-ms!e8yw15s%e@e7%z2v-1zbxh8vc_-^mj_tl4x%lof8)98+eet
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost","127.0.0.1","0.0.0.0", 
+ALLOWED_HOSTS = ["localhost","127.0.0.1", "0.0.0.0",
                  ".ap-northeast-2.compute.amazonaws.com"]
 
 LOGIN_URL = "/auth/login"

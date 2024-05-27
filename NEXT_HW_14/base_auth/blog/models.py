@@ -1,7 +1,8 @@
 import datetime
 from django.db import models
 from django.conf import settings
-
+from pathlib import Path
+from urllib.parse import urlparse, unquote
 
 class Post(models.Model):
     title = models.CharField(max_length=50)
@@ -25,6 +26,7 @@ class Post(models.Model):
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
     content = models.TextField()
+    image_url = models.URLField(blank=True, null = True)
     creator = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="comments"
     )

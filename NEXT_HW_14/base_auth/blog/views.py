@@ -8,9 +8,7 @@ from django.contrib.auth.decorators import login_required
 from authapp.permissions import check_is_creator_or_admin
 from .utils import get_new_file_name, update_post_lasted_viewed
 from django.contrib.auth import get_user_model
-from django.core.files.storage import default_storage  #이거 추가해야 함!
-
-
+from django.core.files.storage import default_storage
 
 
 def home(request):
@@ -25,20 +23,19 @@ def new(request):
         title = request.POST["title"]
         content = request.POST["content"]
 
-        new_post = Post.objects.create(
-            title=title, content=content, creator=request.user
-        )
-        image = request.FILES["image"]
-        
+        new_post = Post(title=title, content=content, creator=request.user)
+
+        image = request.FILES.get("image") 
+        # get으로 가져와야, 안 넣었을 때 오류 안난다 괄호 ()주의
         if image:
             image_name = get_new_file_name(image, request.user, title)
-            saved_path = default_storage.save(image_name, image) # type: ignore
-            image_url = default_storage.url(saved_path) # type: ignore
-            
+
+            saved_path = default_storage.save(image_name, image)
+            image_url = default_storage.url(saved_path)
+
             new_post.image_url = image_url
         new_post.save()
-        
-        
+
         return redirect("detail", new_post.pk)
 
     return render(request, "new.html")
@@ -50,10 +47,20 @@ def detail(request, post_pk):
     post = Post.objects.get(pk=post_pk)
     if request.method == "POST":
         content = request.POST["content"]
-        Comment.objects.create(post=post, content=content, creator=request.user)
+        image = request.FILES.get("image")  # 이미지 파일 가져오기        
+        if image: 
+            image_name = get_new_file_name(image, request.user,title = content)
+            saved_path = default_storage.save(image_name, image)
+            image_url = default_storage.url(saved_path)
+            Comment.objects.create(
+                post=post, content=content, creator=request.user, image_url=image_url)
+        else:
+            Comment.objects.create(
+                post=post, content=content, creator=request.user)
         return redirect("detail", post_pk)
 
     return render(request, "detail.html", {"post": post})
+
 
 
 @login_required
@@ -65,17 +72,18 @@ def edit(request, post_pk):
         title = request.POST["title"]
         content = request.POST["content"]
         Post.objects.filter(pk=post_pk).update(title=title, content=content)
-        
-        #image handling
-        image = request.FILES["image"]
+
+        # Image handling
+        image = request.FILES.get("image")
         if image:
             image_name = get_new_file_name(image, request.user, title)
-            saved_path = default_storage.save(image_name, image) # type: ignore
-            image_url = default_storage.url(saved_path) # type: ignore
-            
+
+            saved_path = default_storage.save(image_name, image)
+            image_url = default_storage.url(saved_path)
+
             post.image_url = image_url
             post.save()
-        
+
         return redirect("detail", post_pk)
 
     return render(request, "edit.html", {"post": post})
